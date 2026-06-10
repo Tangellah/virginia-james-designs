@@ -448,8 +448,8 @@ ul li a:hover{
             height: 120px;
         }
         .modal-image {
-            width: min(100vw, 600px);
-            height: min(100vh, 7000px);
+            width: 600px;
+            height: 700px;
         }
     }
 
