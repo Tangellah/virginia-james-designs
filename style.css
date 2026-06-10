@@ -99,6 +99,98 @@ ul li a:hover{
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
 }
+.search-results-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 18px;
+    background: rgba(0, 0, 0, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+    color: #f7f7f7;
+}
+.search-results-header {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #ffd35c;
+}
+.search-results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+}
+.search-result-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+.search-result-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+.search-result-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+.search-result-text {
+    padding: 12px 14px;
+    font-size: 14px;
+    line-height: 1.45;
+}
+.result-title {
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+.no-results {
+    font-size: 15px;
+    padding: 16px;
+    text-align: center;
+    color: #ffa375;
+/* Image Modal Styles */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+}
+.image-modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+}
+.maximized-image {
+    width: 300px;
+    height: 185px;
+    border-radius: 25px;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+.close-modal {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+.close-modal:hover {
+    color: #ff7200;
+}
+}
 .btn{
     width: 100px;
     height: 35px;
