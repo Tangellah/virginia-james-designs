@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virginia James Designs</title>
+    <meta name="profile" content="https://valli229.github.io/virginia-james-designs/">
     <link rel="stylesheet" href="GALLERY.css">
     <link rel="icon" type="image/png" href="vjd-logo.png">
 </head>
@@ -29,21 +30,205 @@
                 <input class="srch"  type="search" name="" placeholder="Type your text">
                 <a href="#"><button class="btn">search</button></a>
             </div>
-            <div class="content">
-                <h1>FASHION DESIGN &<br><span>TAILORING <br></span><i>COURSE</i></h1>
-                <p class="par">VJD is the home of fashion designing<br> where creating stylish and attractive clothing that reflect culture,
-                    ,<br> creativity, and modern trends are being nailed each and every day.<br>We also offer Tailoring course.<br>The course teaches learners how to design garments,<br> take body measurements, cut fabrics, sew different styles of clothing,<br> and use of sewing machines professionally.<br>The training encourages creativity, innovation and attention to detail while preparing<br> learners for self-employment or work in fashion businesses.</p>
-                
-                    <button class="cn"><a href="#">JOIN NOW</a></button>
-                <button class="cnn"><a href="#">SUPPORT</a></button>
-                <p class="para">follow us on our facebook page below<br><a href="https://www.facebook.com/share/17eYXdBj17/">CLICK HERE!</a></p>
-                </div>
-            </div>
+        </div>
+
+        <div class="gallery-wrapper">
+            <section class="gallery-intro">
+                <h1>VjD Gallery</h1>
+                <p>Explore through every category</p>
+            </section>
+
+            <div id="gallery-container"></div>
         </div>
     </div>
     <section class="page">
          <h2 class="contact"><a href="CONTACT US .html">CONTACT US</a></h2>
     </section>
+
+    <div id="gallery-modal" class="gallery-modal" role="dialog" aria-hidden="true">
+        <div class="gallery-modal-content">
+            <button type="button" class="close-modal" aria-label="Close image preview">×</button>
+            <img class="modal-image" src="" alt="">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryData = [
+                {
+                    title: 'Bridal Collection',
+                    items: [
+                        { src: 'BRIDAL-1.jpg', alt: 'Bridal wear', label: 'Bridal 1' },
+                        { src: 'BRIDAL-2.jpg', alt: 'Bridal dress', label: 'Bridal 2' },
+                        { src: 'BRIDAL-3.jpg', alt: 'Bridal gown', label: 'Bridal 3' },
+                        { src: 'BRIDAL-4.jpg', alt: 'Bridal collection', label: 'Bridal 4' },
+                        { src: 'BRIDAL-5.jpg', alt: 'Bridal design', label: 'Bridal 5' },
+                        { src: 'BRIDAL-6.jpg', alt: 'Bridal style', label: 'Bridal 6' },
+                        { src: 'BRIDAL-7.jpg', alt: 'Bridal wear', label: 'Bridal 7' },
+                        { src: 'BRIDAL-8.jpg', alt: 'Bridal couture', label: 'Bridal 8' },
+                        { src: 'BRIDAL-9.jpg', alt: 'Bridal fashion', label: 'Bridal 9' },
+                        { src: 'BRIDAL-10.jpg', alt: 'Bridal outfit', label: 'Bridal 10' },
+                        { src: 'BRIDAL-11.jpg', alt: 'Bridal collection', label: 'Bridal 11' },
+                        { src: 'BRIDAL-12.jpg', alt: 'Bridal dress', label: 'Bridal 12' },
+                        { src: 'BRIDAL-13.jpg', alt: 'Bridal design', label: 'Bridal 13' }
+                    ]
+                },
+                {
+                    title: 'Mens Wear',
+                    items: [
+                        { src: 'MENS-WEAR.jpg', alt: 'Mens wear', label: 'Mens Wear' },
+                        { src: 'MENS-WEAR-2.jpg', alt: 'Mens wear 2', label: 'Mens Wear 2' },
+                        { src: 'MENS-WEAR-3.jpg', alt: 'Mens wear 3', label: 'Mens Wear 3' },
+                        { src: 'MENS-WEAR-4.jpg', alt: 'Mens wear 4', label: 'Mens Wear 4' },
+                        { src: 'MENS-WEAR-5.jpg', alt: 'Mens wear 5', label: 'Mens Wear 5' },
+                        { src: 'MENS-WEAR-6.jpg', alt: 'Mens wear 6', label: 'Mens Wear 6' },
+                        { src: 'MENS-WEAR-7.jpg', alt: 'Mens wear 7', label: 'Mens Wear 7' },
+                        { src: 'MENS-WEAR-8.jpg', alt: 'Mens wear 8', label: 'Mens Wear 8' },
+                        { src: 'MENS-WEAR-9.jpg', alt: 'Mens wear 9', label: 'Mens Wear 9' }
+                    ]
+                },
+                {
+                    title: 'Womens Wear',
+                    items: [
+                        { src: 'WOMEN-WEAR-1.jpg', alt: 'Womens wear 1', label: 'Womens Wear 1' },
+                        { src: 'WOMEN-WEAR-2.jpg', alt: 'Womens wear 2', label: 'Womens Wear 2' },
+                        { src: 'WOMEN-WEAR-3.jpg', alt: 'Womens wear 3', label: 'Womens Wear 3' },
+                        { src: 'WOMEN-WEAR-4.jpg', alt: 'Womens wear 4', label: 'Womens Wear 4' },
+                        { src: 'WOMEN-WEAR-5.jpg', alt: 'Womens wear 5', label: 'Womens Wear 5' },
+                        { src: 'WOMEN-WEAR-6.jpg', alt: 'Womens wear 6', label: 'Womens Wear 6' },
+                        { src: 'WOMEN-WEAR-7.jpg', alt: 'Womens wear 7', label: 'Womens Wear 7' },
+                        { src: 'WOMEN-WEAR-8.jpg', alt: 'Womens wear 8', label: 'Womens Wear 8' },
+                        { src: 'WOMEN-WEAR-9.jpg', alt: 'Womens wear 9', label: 'Womens Wear 9' },
+                        { src: 'WOMEN-WEAR-10.jpg', alt: 'Womens wear 10', label: 'Womens Wear 10' },
+                        { src: 'WOMEN-WEAR-11.jpg', alt: 'Womens wear 11', label: 'Womens Wear 11' },
+                        { src: 'WOMEN-WEAR-12.jpg', alt: 'Womens wear 12', label: 'Womens Wear 12' },
+                        { src: 'WOMEN-WEAR-13.jpg', alt: 'Womens wear 13', label: 'Womens Wear 13' },
+                        { src: 'WOMEN-WEAR-14.jpg', alt: 'Womens wear 14', label: 'Womens Wear 14' },
+                        { src: 'WOMEN-WEAR-15.jpg', alt: 'Womens wear 15', label: 'Womens Wear 15' },
+                        { src: 'WOMEN-WEAR-16.jpg', alt: 'Womens wear 16', label: 'Womens Wear 16' },
+                        { src: 'WOMEN-WEAR-17.jpg', alt: 'Womens wear 17', label: 'Womens Wear 17' },
+                        { src: 'WOMEN-WEAR-18.jpg', alt: 'Womens wear 18', label: 'Womens Wear 18' },
+                        { src: 'WOMEN-WEAR-19.jpg', alt: 'Womens wear 19', label: 'Womens Wear 19' },
+                        { src: 'WOMEN-WEAR-20.jpg', alt: 'Womens wear 20', label: 'Womens Wear 20' },
+                        { src: 'WOMEN-WEAR-21.jpg', alt: 'Womens wear 21', label: 'Womens Wear 21' },
+                        { src: 'WOMEN-WEAR-22.jpg', alt: 'Womens wear 22', label: 'Womens Wear 22' },
+                        { src: 'WOMEN-WEAR-23.jpg', alt: 'Womens wear 23', label: 'Womens Wear 23' },
+                        { src: 'WOMEN-WEAR-24.jpg', alt: 'Womens wear 24', label: 'Womens Wear 24' },
+                        { src: 'WOMEN-WEAR-25.jpg', alt: 'Womens wear 25', label: 'Womens Wear 25' },
+                        { src: 'WOMEN-WEAR-26.jpg', alt: 'Womens wear 26', label: 'Womens Wear 26' },
+                        { src: 'WOMEN-WEAR-27.jpg', alt: 'Womens wear 27', label: 'Womens Wear 27' },
+                        { src: 'WOMEN-WEAR-28.jpg', alt: 'Womens wear 28', label: 'Womens Wear 28' },
+                        { src: 'WOMEN-WEAR-29.jpg', alt: 'Womens wear 29', label: 'Womens Wear 29' },
+                        { src: 'WOMEN-WEAR-30.jpg', alt: 'Womens wear 30', label: 'Womens Wear 30' },
+                        { src: 'WOMEN-WEAR-31.jpg', alt: 'Womens wear 31', label: 'Womens Wear 31' },
+                        { src: 'WOMEN-WEAR-32.jpg', alt: 'Womens wear 32', label: 'Womens Wear 32' },
+                        { src: 'WOMEN-WEAR-33.jpg', alt: 'Womens wear 33', label: 'Womens Wear 33' },
+                        { src: 'WOMEN-WEAR-34.jpg', alt: 'Womens wear 34', label: 'Womens Wear 34' },
+                        { src: 'WOMEN-WEAR-35.jpg', alt: 'Womens wear 35', label: 'Womens Wear 35' },
+                        { src: 'WOMEN-WEAR-36.jpg', alt: 'Womens wear 36', label: 'Womens Wear 36' }
+                    ]
+                },
+                {
+                    title: 'Shirts & T-Shirts',
+                    items: [
+                        { src: 'T-SHIRTS-1.jpg', alt: 'T-Shirts', label: 'T-Shirts' },
+                        { src: 'SHIRTS-1.jpg', alt: 'Shirts', label: 'Shirts 1' },
+                        { src: 'SHIRTS-2.jpg', alt: 'Shirts 2', label: 'Shirts 2' },
+                        { src: 'SHIRTS-3.jpg', alt: 'Shirts 3', label: 'Shirts 3' },
+                        { src: 'SHIRTS-4.jpg', alt: 'Shirts 4', label: 'Shirts 4' },
+                        { src: 'SHIRTS-5.jpg', alt: 'Shirts 5', label: 'Shirts 5' },
+                        { src: 'SHIRTS-8.jpg', alt: 'Shirts 8', label: 'Shirts 8' },
+                        { src: 'SHIRTS-9.jpg', alt: 'Shirts 9', label: 'Shirts 9' },
+                        { src: 'SHIRTS-10.jpg', alt: 'Shirts 10', label: 'Shirts 10' },
+                        { src: 'SHIRT-4.jpg', alt: 'Shirt 4', label: 'Shirt 4' }
+                    ]
+                },
+                {
+                    title: 'School Uniforms',
+                    items: [
+                        { src: 'SCHOOL-UNIFORMS.jpg', alt: 'School Uniforms', label: 'School Uniforms' },
+                        { src: 'SCHOOL-UNIFORMS-2.jpg', alt: 'School Uniforms 2', label: 'School Uniforms 2' },
+                        { src: 'SCHOOL-UNIFORMS-3.jpg', alt: 'School Uniforms 3', label: 'School Uniforms 3' },
+                        { src: 'SCHOOL-UNIFORMS-4.jpg', alt: 'School Uniforms 4', label: 'School Uniforms 4' },
+                        { src: 'SCHOOL-UNIFORMS-5.jpg', alt: 'School Uniforms 5', label: 'School Uniforms 5' }
+                    ]
+                },
+                {
+                    title: 'Summer & Casual',
+                    items: [
+                        { src: 'SUMMER-1.jpg', alt: 'Summer wear', label: 'Summer Wear' }
+                    ]
+                },
+                {
+                    title: 'Mixed Collections',
+                    items: [
+                        { src: 'WOMEN-AND-MEN\'S-WEAR.jpg', alt: 'Women and mens wear', label: 'Mixed Wear 1' },
+                        { src: 'WOMEN-AND-MEN\'S -WEAR.jpg', alt: 'Women and mens wear', label: 'Mixed Wear 2' }
+                    ]
+                },
+                {
+                    title: 'Equipment & Services',
+                    items: [
+                        { src: 'machine.jpg', alt: 'Sewing machine', label: 'Sewing Machine' },
+                        { src: 'services-2.png', alt: 'Services preview', label: 'Services' }
+                    ]
+                }
+            ];
+
+            const galleryContainer = document.getElementById('gallery-container');
+
+            galleryData.forEach((category) => {
+                const section = document.createElement('section');
+                section.className = 'gallery-category';
+                section.innerHTML = `
+                    <h2>${category.title}</h2>
+                    <div class="gallery-grid"></div>
+                `;
+
+                const grid = section.querySelector('.gallery-grid');
+
+                category.items.forEach((item) => {
+                    const card = document.createElement('div');
+                    card.className = 'gallery-card';
+                    card.innerHTML = `
+                        <img src="${item.src}" alt="${item.alt}" loading="lazy">
+                        <div class="gallery-label">${item.label}</div>
+                    `;
+                    card.addEventListener('click', () => {
+                        openGalleryModal(item.src, item.alt);
+                    });
+                    grid.appendChild(card);
+                });
+
+                galleryContainer.appendChild(section);
+            });
+
+            const modal = document.getElementById('gallery-modal');
+            const modalImage = modal.querySelector('.modal-image');
+            const closeModal = modal.querySelector('.close-modal');
+
+            function openGalleryModal(src, alt) {
+                modalImage.src = src;
+                modalImage.alt = alt;
+                modal.setAttribute('aria-hidden', 'false');
+                modal.classList.add('visible');
+            }
+
+            function hideGalleryModal() {
+                modal.setAttribute('aria-hidden', 'true');
+                modal.classList.remove('visible');
+                modalImage.src = '';
+                modalImage.alt = '';
+            }
+
+            closeModal.addEventListener('click', hideGalleryModal);
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    hideGalleryModal();
+                }
+            });
+        });
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="search.js"></script>
 </body>
