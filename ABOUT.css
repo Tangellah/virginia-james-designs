@@ -381,6 +381,7 @@ p{
   .srch {
     width: 100% !important;
     max-width: 100% !important;
+      text-align: center !important;
   }
   .menu ul {
     flex-wrap: wrap !important;
@@ -389,6 +390,7 @@ p{
   }
   .menu ul li {
     margin: 8px !important;
+    text-align: center !important;
   }
   .gallery-grid,
   .service-cards,
