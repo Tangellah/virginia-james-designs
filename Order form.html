@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virginia James Designs - Order Form</title>
+    <title>Virginia James Designers - Order Form</title>
     <link rel="stylesheet" href="Order form.css">
     <link rel="icon" type="image/png" href="vjd-logo.png">
 </head>
@@ -31,7 +31,7 @@
         <section class="hero">
             <div class="form-card">
                 <div class="form-intro">
-                    <span>Virginia James Designs</span>
+                    <span>Virginia James Designers</span>
                     <h1>Order Your Design</h1>
                     <p>Share your measurements, style preferences, and delivery details for a custom outfit include your location.</p>
                 </div>
@@ -61,9 +61,9 @@
             </div>
         </section>
 
-        <section class="page">
-            <h2 class="contact"><a href="CONTACT US .html">CONTACT US</a></h2>
-        </section>
+         <footer class="page">
+            <h2 class="contact"><a href="CONTACT US.html">CONTACT US</a></h2>
+        </footer>
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -74,9 +74,43 @@
         const clothingTypeInput = document.getElementById('clothingType');
         const orderDetailsInput = document.getElementById('orderDetails');
         const sampleImageInput = document.getElementById('sampleImage');
+        const selectedImageInput = document.getElementById('selectedImage');
+        const selectedServiceInput = document.getElementById('selectedService');
+        const selectedImageLabel = document.getElementById('selectedImageLabel');
+        const selectedServiceLabel = document.getElementById('selectedServiceLabel');
         const deliveryDateInput = document.getElementById('deliveryDate');
 
         const businessWhatsAppNumber = '265884356327'; // Replace with your business number in international format without +
+
+        function getSampleImageText() {
+            if (selectedImageInput.value) {
+                return selectedImageInput.value;
+            }
+            if (sampleImageInput.files && sampleImageInput.files.length > 0) {
+                return sampleImageInput.files[0].name;
+            }
+            return 'None';
+        }
+
+        function applyOrderParams() {
+            const params = new URLSearchParams(window.location.search);
+            const image = params.get('image');
+            const service = params.get('service');
+
+            if (image) {
+                selectedImageInput.value = image;
+                selectedImageLabel.value = image;
+            }
+
+            if (service) {
+                selectedServiceInput.value = service;
+                selectedServiceLabel.value = service;
+                const option = Array.from(clothingTypeInput.options).find(opt => opt.value === service || opt.text === service);
+                if (option) {
+                    clothingTypeInput.value = option.value;
+                }
+            }
+        }
 
         function formatWhatsAppMessage() {
             const fullName = fullNameInput.value.trim();
@@ -84,16 +118,17 @@
             const clothingType = clothingTypeInput.value;
             const orderDetails = orderDetailsInput.value.trim();
             const deliveryDate = deliveryDateInput.value;
-            const sampleImageFile = sampleImageInput.files[0];
-            const sampleImageText = sampleImageFile ? sampleImageFile.name : 'No sample image selected';
+            const sampleImageText = getSampleImageText();
+            const selectedService = selectedServiceInput.value || 'None';
 
             return encodeURIComponent(
-                `New order request from Virginia James Designs website:\n` +
+                `New order request from Virginia James Designers website:\n` +
                 `Full name: ${fullName}\n` +
                 `Phone / WhatsApp: ${phone}\n` +
                 `Clothing type: ${clothingType}\n` +
-                `Measurements / design details: ${orderDetails}\n` +
+                `Selected service: ${selectedService}\n` +
                 `Sample image: ${sampleImageText}\n` +
+                `Measurements / design details: ${orderDetails}\n` +
                 `Delivery date: ${deliveryDate}`
             );
         }
