@@ -3,31 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virginia James Designs</title>
+    <title>Categories - Virginia James Designers</title>
+    <meta name="profile" content="https://valli229.github.io/virginia-james-designs/">
     <link rel="stylesheet" href="CATEGORIES.css">
+    <link rel="stylesheet" href="Photo order.css">
     <link rel="icon" type="image/png" href="vjd-logo.png">
 </head>
 <body>
-
     <div class="main">
-        <div class="navbar">
+        <header class="navbar">
             <div class="icon">
-                <h2 class="logo"><a href="index.html"><img src="vjd-logo.png"></a></h2>
+                <h2 class="logo"><a href="index.html"><img src="vjd-logo.png" alt="Virginia James Designers Logo"></a></h2>
             </div>
 
-            <div class="menu">
+            <nav class="menu">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="SERVICES.html">SERVICE</a></li>
                     <li><a href="ABOUT.html">ABOUT</a></li>
-                   <li><a href="GALLERY.html">GALLERY</a></li>
-                   <li><a href="Order form.html">ORDER HERE</a></li>
+                    <li><a href="GALLERY.html">GALLERY</a></li>
+                    <li><a href="Order form.html">ORDER HERE</a></li>
+                    <li><a href="CONTACT US.html">CONTACT US</a></li>
                 </ul>
-            </div>
+            </nav>
 
             <div class="search">
-                <input class="srch" type="search" name="" placeholder="Type your text">
-                <a href="#"><button class="btn">search</button></a>
+                <input class="srch" type="search" name="search" placeholder="Type your text">
+                <button class="btn">search</button>
             </div>
 
             <div class="category-dropdown">
@@ -36,17 +38,104 @@
                     <option value="mens-wear">MEN'S WEAR</option>
                     <option value="womens-wear">WOMEN WEAR</option>
                     <option value="bridal">BRIDAL</option>
-                    <option value="interiors">INTERIALS</option>
+                    <option value="interiors">INTERIORS</option>
                     <option value="school-uniforms">SCHOOL UNIFORMS</option>
+                    <option value="school-uniforms">MIXED WEAR</option>
                 </select>
             </div>
-            </div>
-        </div>
+        </header>
+
+        <!-- This content now appears just after the category dropdown -->
+        <main class="categories-content" id="categories-page">
+            <section class="category-intro">
+                <h1>Categories</h1>
+                <p>Choose a category below. You can edit the titles, descriptions and images directly in this file.</p>
+            </section>
+
+            <section id="categories-grid" class="gallery-grid">
+                <div class="category-card" id="mens-wear">
+                    <h3>Men's Wear</h3>
+                    <p>Smart suits, shirts and casual outfits designed to fit your style and measurements.</p>
+                    <img src="MENS-WEAR-6.jpg" alt="Men's wear" loading="lazy">
+                    <div class="action-row">
+                        <button class="action-btn order-btn" data-service-name="Men's Wear" data-order-src="MENS-WEAR.jpg" type="button"><a href="Order form.html">🛍️ Order</a></button>
+                        <button class="action-btn more-btn" type="button">📸 More</button>
+                    </div>
+                    <div class="more-images hidden" aria-live="polite"></div>
+                </div>
+
+                <div class="category-card" id="womens-wear">
+                    <h3>Women's Wear</h3>
+                    <p>Beautiful dresses, blouses, skirts and custom outfits for everyday wear and special events.</p>
+                    <img src="WOMEN-WEAR-10.jpg" alt="Women's wear" loading="lazy">
+                    <div class="action-row">
+                        <button class="action-btn order-btn" data-service-name="Women's Wear" data-order-src="WOMEN-WEAR-1.jpg" type="button"><a href="Order form.html">🛍️ Order</a></button>
+                        <button class="action-btn more-btn" type="button">📸 More</button>
+                    </div>
+                    <div class="more-images hidden" aria-live="polite"></div>
+                </div>
+
+                <div class="category-card" id="bridal">
+                    <h3>Bridal</h3>
+                    <p>Custom bridal gowns, bridesmaid dresses and fitting services made with care and detail.</p>
+                    <img src="BRIDAL-4.jpg" alt="Bridal wear" loading="lazy">
+                    <div class="action-row">
+                        <button class="action-btn order-btn" data-service-name="Bridal" data-order-src="BRIDAL-1.jpg" type="button"><a href="Order form.html">🛍️ Order</a></button>
+                        <button class="action-btn more-btn" type="button">📸 More</button>
+                    </div>
+                    <div class="more-images hidden" aria-live="polite"></div>
+                </div>
+
+                <div class="category-card" id="interiors">
+                    <h3>Interiors</h3>
+                    <p>Curtains, cushions and simple interior fabric work for homes, offices and events.</p>
+                    <img src="machine.jpg" alt="Interior tailoring" loading="lazy">
+                    <div class="action-row">
+                        <button class="action-btn order-btn" data-service-name="Interiors" data-order-src="machine.jpg" type="button"><a href="Order form.html">🛍️ Order</a></button>
+                        <button class="action-btn more-btn" type="button">📸 More</button>
+                    </div>
+                    <div class="All-images hidden" aria-live="polite"></div>
+                </div>
+
+                <div class="category-card" id="school-uniforms">
+                    <h3>School Uniforms</h3>
+                    <p>Durable school uniforms made for comfort, neatness and long-lasting daily use.</p>
+                    <img src="SCHOOL-UNIFORMS.jpg" alt="School uniforms" loading="lazy">
+                    <div class="action-row">
+                        <button class="action-btn order-btn" data-service-name="School Uniforms" data-order-src="SCHOOL-UNIFORMS.jpg" type="button"><a href="Order form.html">🛍️ Order</a></button>
+                        <button class="action-btn more-btn" type="button">📸 More</button>
+                    </div>
+                    <div class="more-images hidden" aria-live="polite"></div>
+                </div>
+                  
+                <div class="category-card" id="mixed-wear">
+                    <h3>Mixed Wear</h3>
+                    <p>Stylish and versatile clothing options for various occasions and preferences.</p>
+                    <img src="WOMEN-AND-MEN'S -WEAR.jpg" alt="Mixed wear" loading="lazy">
+                    <div class="action-row">
+                        <button class="action-btn order-btn" data-service-name="Mixed Wear" data-order-src="MIXED-WEAR.jpg" type="button"><a href="Order form.html">🛍️ Order</a></button>
+                        <button class="action-btn more-btn" type="button">📸 More</button>
+                    </div>
+                    <div class="more-images hidden" aria-live="polite"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="page">
+            <h2 class="contact"><a href="CONTACT US.html">CONTACT US</a></h2>
+        </footer>
     </div>
-    <section class="page">
-         <h2 class="contact"><a href="CONTACT US .html">CONTACT US</a></h2>
-    </section>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <script>
+        const categorySelect = document.getElementById('categorySelect');
+        categorySelect.addEventListener('change', function () {
+            const selectedCard = document.getElementById(this.value);
+            if (selectedCard) {
+                selectedCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    </script>
+    <script src="order-modal-loader.js"></script>
     <script src="search.js"></script>
 </body>
 </html>
