@@ -3,51 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virginia James Designs</title>
+    <title>About - Virginia James Designers</title>
+    <meta name="profile" content="https://valli229.github.io/virginia-james-designs/">
     <link rel="stylesheet" href="ABOUT.css">
+    <link rel="stylesheet" href="Photo order.css">
     <link rel="icon" type="image/png" href="vjd-logo.png">
 </head>
 <body>
-
     <div class="main">
-        <div class="navbar">
+        <header class="navbar">
             <div class="icon">
-                <h2 class="logo"><a href="index.html"><img src="vjd-logo.png"></a></h2>
+                <h2 class="logo"><a href="index.html"><img src="vjd-logo.png" alt="Virginia James Designers Logo"></a></h2>
             </div>
 
-            <div class="menu">
+            <nav class="menu">
                 <ul>
-                  <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html">HOME</a></li>
                     <li><a href="SERVICES.html">SERVICE</a></li>
                     <li><a href="CATEGORIES.html">CATEGORIES</a></li>
-                   <li><a href="GALLERY.html">GALLERY</a></li>
-                   <li><a href="Order form.html">ORDER HERE</a></li>
+                    <li><a href="GALLERY.html">GALLERY</a></li>
+                    <li><a href="Order form.html">ORDER HERE</a></li>
+                    <li><a href="CONTACT US.html">CONTACT US</a></li>
                 </ul>
-            </div>
+            </nav>
 
             <div class="search">
-                <input class="srch"  type="search" name="" placeholder="Type your text">
-                <a href="#"><button class="btn">search</button></a>
+                <input class="srch" type="search" name="search" placeholder="Type your text">
+                <button class="btn">search</button>
             </div>
-            <div class="content">
-                <h1>FASHION DESIGN &<br><span>TAILORING <br></span><i>COURSE</i></h1>
-                <p class="par">VJD is the home of fashion designing<br> where creating stylish and attractive clothing that reflect culture,
-                    ,<br> creativity, and modern trends are being nailed each and every day.<br>We also offer Tailoring course.<br>The course teaches learners how to design garments,<br> take body measurements, cut fabrics, sew different styles of clothing,<br> and use of sewing machines professionally.<br>The training encourages creativity, innovation and attention to detail while preparing<br> learners for self-employment or work in fashion businesses.</p>
-                
-                    <button class="cn"><a href="#">JOIN NOW</a></button>
-                <button class="cnn"><a href="#">SUPPORT</a></button>
-                <p class="para">follow us on our facebook page below<br><a href="https://www.facebook.com/share/17eYXdBj17/">CLICK HERE!</a></p>
-                
-                    
+        </header>
+
+        <main class="about-content" id="about-page">
+            <section class="about-hero">
+                <div>
+                    <span class="small-title">About Us</span>
+                    <h1>Welcome to Virginia James Designers</h1>
+                    <p>Virginia James Designers is a fashion design and tailoring brand focused on creating smart, beautiful and comfortable outfits for different occasions. We design, sew, repair and customize garments according to the customer’s style, measurements and needs.</p>
+                    <a class="about-btn" href="Order form.html">Make an Order</a>
+                </div>
+                <img src="vjd-logo.png" alt="Virginia James Designers">
+            </section>
+
+            <section class="about-section">
+                <h2>Who We Are</h2>
+                <p>We work with customers who need quality clothing, school uniforms, bridal wear, men’s wear, women’s wear and other tailored designs. Our goal is to give every customer a neat finish, good fitting and a design they can wear with confidence.</p>
+            </section>
+
+            <section class="about-section">
+                <h2>Our Mission</h2>
+                <p>Our mission is to provide reliable tailoring services and practical fashion solutions while helping people look good and feel confident in what they wear. You can edit this paragraph and add your own business mission here.</p>
+            </section>
+
+            <section class="services-list">
+                <h2>What We Offer</h2>
+                <div class="service-cards">
+                    <div class="service-card">
+                        <h3>Custom Tailoring</h3>
+                        <p>Made-to-measure clothing for men, women and special events.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Bridal Wear</h3>
+                        <p>Bridal gowns, bridesmaid dresses and fitting adjustments.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>School Uniforms</h3>
+                        <p>Neat and durable uniforms for learners and school groups.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Repairs & Alterations</h3>
+                        <p>Clothing resizing, repairs and adjustments for better fitting.</p>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+
+            <section class="about-section two-column">
+                <div>
+                    <h2>Why Choose Us?</h2>
+                    <p>We pay attention to fabric, measurements, finishing and customer instructions. Every order is handled carefully so that the final product looks clean and professional.</p>
+                </div>
+                <div>
+                    <h2>Our Promise</h2>
+                    <p>We aim to deliver quality work, friendly service and designs that match the customer’s taste. </p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="page">
+            <h2 class="contact"><a href="CONTACT US.html">CONTACT US</a></h2>
+        </footer>
     </div>
-    <section class="page">
-          <h2 class="contact"><a href="CONTACT US .html">CONTACT US</a></h2>
-    </section>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <script src="order-modal-loader.js"></script>
     <script src="search.js"></script>
 </body>
 </html>
