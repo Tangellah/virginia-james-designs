@@ -391,7 +391,7 @@ body{
   }
   .menu ul li {
     margin: 8px !important;
-      align-items: center !important; 
+    text-align: center !important;
   }
   .gallery-grid,
   .service-cards,
