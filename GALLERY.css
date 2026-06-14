@@ -581,7 +581,7 @@ ul li a:hover{
         margin-top: 10px;
     }
     .srch {
-        width: calc(100% - 100px) !important;
+        width: 50px !important;
     }
     .content {
         width: 100% !important;
