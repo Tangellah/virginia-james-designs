@@ -61,28 +61,32 @@
                     </div>
                 </div>
 
-                <div class="contact-card">
-                    <div class="Contact-form">
-                        <h4>SEND A MESSAGE</h4>
-                        <input type="name" name="name" placeholder="Enter your name" id="name" required><br>
-                        <input type="Email" name="Email" placeholder="Enter Email"><br>
-                        <div class="message">
-                        <label for="message">Message</label><br>
-                        <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
-                    </div>
-                    
+                <div class="contact-card contact-form-card">
+                    <div class="contact-form">
+                        <h2>Send a Message</h2>
+                        <form id="siteContactForm">
+                            <label for="name">Your name</label>
+                            <input type="text" name="name" id="name" placeholder="Enter your name" required>
 
+                            <label for="Email">Email</label>
+                            <input type="email" name="Email" id="Email" placeholder="Enter your email" required>
+
+                            <div class="message">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                            </div>
 
                             <div class="button">
                                 <button type="button" onclick="sendToGmail()">Send</button>
                             </div>
-                             <div class="wap">
-                        <h2>WhatsApp Us</h2>
-                        <p class="parr">Prefer WhatsApp? Click the button below to start a chat with us.</p>
-                        <a href="https://wa.me/265884356327" target="_blank"><button class="bttn">Chat on WhatsApp</button></a>
-                    </div>
                         </form>
-                    </section>
+
+                        <div class="wap">
+                            <h2>WhatsApp Us</h2>
+                            <p class="parr">Prefer WhatsApp? Click the button below to start a chat with us.</p>
+                            <a href="https://wa.me/265884356327" target="_blank"><button class="bttn">Chat on WhatsApp</button></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
